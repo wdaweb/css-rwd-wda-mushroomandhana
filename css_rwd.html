@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css rwd</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "微軟正黑體";
+    }
+
+    .container {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100vh;
+      max-width: 1920px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0 auto;
+      position: relative;
+
+    }
+
+
+    .row {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      flex: 0 0 auto;
+      padding: 12px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* text-align: center; */
+    }
+
+    /* .row:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    } */
+
+
+    .row:nth-child(2)::after {
+      content: '';
+      width: 300px;
+      background: #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .column {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      max-width: 180px;
+      min-width: 100px;
+      height: auto;
+    }
+
+    .row:nth-child(1) {
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: bolder;
+      margin: 0.5rem 0 1rem 0;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0.25rem;
+    }
+
+    .text_area {
+      /* width: 375px; */
+      margin: 0 auto;
+      text-align: left;
+      /* text-align: center; */
+    }
+
+    .row:nth-child(1) .text_area {
+      text-align: center;
+    }
+
+    .text_area {
+      text-align: center;
+    }
+
+    .row:nth-child(2) p,
+    .row:nth-child(3) p,
+    .row:nth-child(4) p,
+    .row:nth-child(5) p,
+    .row:nth-child(6) p,
+    .row:nth-child(7) p,
+    .row:nth-child(8) p {
+      display: block;
+    }
+
+
+    .row:nth-child(1) {
+      display: block;
+    }
+
+
+
+    @media(min-width: 576px) {
+      .container {
+        padding: 0 20PX;
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        width: 100%;
+        max-height: 100vh;
+        max-width: 1920px;
+        max-height: 100vh;
+        overflow: hidden;
+
+      }
+
+      .row:nth-child(1) {
+        transform-origin: center;
+        z-index: 999;
+      }
+
+      .row:nth-child(2),
+      .row:nth-child(3),
+      .row:nth-child(4),
+      .row:nth-child(5),
+      .row:nth-child(6),
+      .row:nth-child(7),
+      .row:nth-child(8) {
+        max-width: 11%;
+        min-width: 9%;
+        position: absolute;
+        margin: 0 auto;
+      }
+
+      .row:nth-child(2) p,
+      .row:nth-child(3) p,
+      .row:nth-child(4) p,
+      .row:nth-child(5) p,
+      .row:nth-child(6) p,
+      .row:nth-child(7) p,
+      .row:nth-child(8) p {
+        display: none;
+      }
+
+
+
+      /* .column:nth-child(2),
+      .column:nth-child(3),
+      .column:nth-child(4),
+      .column:nth-child(5),
+      .column:nth-child(6),
+      .column:nth-child(7),
+      .column:nth-child(8){
+        width: 100%;
+        max-width: 280px;
+      } */
+
+      /* .row:nth-child(2) .column,
+      .row:nth-child(3) .column,
+      .row:nth-child(4) .column,
+      .row:nth-child(5) .column,
+      .row:nth-child(6) .column,
+      .row:nth-child(7) .column,
+      .row:nth-child(8) .column{
+        width: 100%;
+        max-width: 280px;
+      } */
+
+      .row:nth-child(2) {
+        width: 100%;
+        top: 6%;
+        right: 62%;
+        z-index: 999;
+        position: absolute;
+      }
+
+
+      .row:nth-child(3) {
+        width: 100%;
+        top: -3%;
+        /* right: 512px; */
+        right: 36%;
+        z-index: 999;
+        position: absolute;
+      }
+
+
+      .row:nth-child(4) {
+        width: 100%;
+        top: 34%;
+        right: 55%;
+        z-index: 999;
+        position: absolute;
+      }
+
+
+      .row:nth-child(5) {
+        width: 100%;
+        top: 63%;
+        right: 28%;
+        z-index: 999;
+        position: absolute;
+      }
+
+
+      .row:nth-child(6) {
+        width: 100%;
+        top: -3%;
+        left: 29%;
+        z-index: 999;
+        position: absolute;
+      }
+
+
+      .row:nth-child(7) {
+        width: 100%;
+        top: 20%;
+        left: 64%;
+        z-index: 999;
+        position: absolute;
+      }
+
+      .row:nth-child(8) {
+        width: 100%;
+        top: 63%;
+        left: 35%;
+        z-index: 999;
+        position: absolute;
+      }
+
+      .row:nth-child(2) img,
+      .row:nth-child(3) img,
+      .row:nth-child(4) img,
+      .row:nth-child(5) img,
+      .row:nth-child(6) img,
+      .row:nth-child(7) img,
+      .row:nth-child(8) img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+      }
+
+
+      /* img {
+      width: 100%;
+      height: auto;
+      /* max-width: 10%; */
+
+
+
+      .row:nth-child(1) img {
+        width: 320px;
+        height: auto;
+      }
+
+
+      .wda::after {
+        content: '';
+        display: block;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        background: #f00;
+        z-index: 999;
+      }
+
+
+      .row:nth-child(1) span {
+        background: #aaa;
+        height: 1px;
+        position: absolute;
+        transform-origin: left;
+        /* top: 132px; */
+      }
+
+      .row:nth-child(1) span:nth-of-type(1) {
+        width: 9%;
+        transform: rotate(222deg);
+        top: calc(50% - 172px);
+        left: calc(50% - 118px);
+      }
+
+      .row:nth-child(1) span:nth-of-type(2) {
+        width: 20.25%;
+        transform: rotate(201deg);
+        top: calc(50% - 100px);
+        left: calc(50% - 146px);
+      }
+
+      .row:nth-child(1) span:nth-of-type(3) {
+        width: 15.6%;
+        transform: rotate(172deg);
+        top: calc(50% - 30px);
+        left: calc(50% - 144px);
+      }
+
+      .row:nth-child(1) span:nth-of-type(4) {
+        width: 7.31%;
+        transform: rotate(145deg);
+        top: calc(50% - -29px);
+        left: calc(50% - 122px);
+      }
+
+      .row:nth-child(1) span:nth-of-type(5) {
+        width: 10.1%;
+        transform: rotate(28deg);
+        top: calc(50% - -7px);
+        left: calc(50% - -135px);
+      }
+
+      .row:nth-child(1) span:nth-of-type(6) {
+        width: 20.25%;
+        transform: rotate(-9deg);
+        top: calc(50% - 73px);
+        left: calc(50% - -145px);
+      }
+
+      .row:nth-child(1) span:nth-of-type(7) {
+        width: 7.31%;
+        transform: rotate(-44deg);
+        top: calc(50% - 150px);
+        left: calc(50% - -128px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="row">
+      <div class="column">
+        <img class="wda" src="./images/wda.png">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="text_area">
+          <h2>泰山職訓局</h2>
+          <h3>從零開始的網頁設計課程</h3>
+          <p>
+            轉職網頁開發人員　掌握就業必備職能<br>
+            由淺入深學習技術　強化職場的競爭力
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column">
+        <img src="./images/html.png">
+        <div class="text_area">
+          <h3>Html</h3>
+          <p>HTML 是基礎網頁技術，網頁瀏覽器可以讀取 HTML 檔案，成為視覺化網頁。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <hr class="hr"> -->
+
+    <div class="row">
+      <div class="column">
+        <img src="./images/css.png">
+        <div class="text_area">
+          <h3>CSS3</h3>
+          <p>CSS 網頁樣式表，可彈性自定變化網頁元素顯示樣貌，節省工作時間。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <hr class="hr"> -->
+
+    <div class="row">
+      <div class="column">
+        <img src="./images/js.png">
+        <div class="text_area">
+          <h3>JavascriptScript</h3>
+          <p>JavaScript 是最流行的腳本語言，能在靜態頁面上添加一些動態效果。</p>
+        </div>
+      </div>
+    </div>
+    <!-- <hr class="hr"> -->
+    <div class="row">
+      <div class="column">
+        <img src="./images/jq.png">
+        <div class="text_area">
+          <h3>jQuery</h3>
+          <p>JavaScript 是最流行的腳本語言，能在靜態頁面上添加一些動態效果。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <hr class="hr"> -->
+
+    <div class="row">
+      <div class="column">
+        <img src="./images/bs.png">
+        <div class="text_area">
+          <h3>Bootstrap</h3>
+          <p>熱門的前端框架工具，用於設計響應式網站、排版、格式和介面。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <hr class="hr"> -->
+
+    <div class="row">
+      <div class="column">
+        <img src="./images/sass.png">
+        <div class="text_area">
+          <h3>Sass</h3>
+          <p>Sass 是世界上最成熟、最穩定、最強大的專業級CSS擴展語言 。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <hr class="hr"> -->
+
+    <div class="row">
+      <div class="column">
+        <img src="./images/vue.png">
+        <div class="text_area">
+          <h3>Vue.js</h3>
+          <p>Vue.js 是一個用於建立使用者介面和單頁應用的 JavaScript 框架。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
